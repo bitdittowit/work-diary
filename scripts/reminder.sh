@@ -149,6 +149,12 @@ setup_reminder() {
     </array>
     <key>RunAtLoad</key>
     <false/>
+    <key>StandardOutPath</key>
+    <string>/tmp/workdiary-reminder.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/workdiary-reminder-error.log</string>
+    <key>KeepAlive</key>
+    <false/>
 </dict>
 </plist>
 EOF
