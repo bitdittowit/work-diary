@@ -14,11 +14,16 @@ chmod +x scripts/work-diary.sh
 nano ~/.zshrc
 ```
 
-Добавьте в конец файла:
+Добавьте в конец файла (замените путь на ваш):
 
 ```bash
 # Work Diary alias
-alias diary="$HOME/nowork/notes/scripts/work-diary.sh"
+alias diary="/path/to/work-diary/scripts/work-diary.sh"
+```
+
+Например, если проект находится в `~/projects/work-diary`:
+```bash
+alias diary="$HOME/projects/work-diary/scripts/work-diary.sh"
 ```
 
 Примените изменения:

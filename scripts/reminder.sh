@@ -86,8 +86,9 @@ setup_reminder() {
     read -p "Минуты? (0-59) [0]: " minute
     minute=${minute:-0}
     
-    # Путь к скрипту напоминания
-    REMINDER_SCRIPT="$HOME/nowork/notes/scripts/work-diary-reminder.sh"
+    # Путь к скрипту напоминания (определяем автоматически)
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    REMINDER_SCRIPT="$SCRIPT_DIR/work-diary-reminder.sh"
     
     # Создаем директорию если её нет
     mkdir -p "$HOME/Library/LaunchAgents"

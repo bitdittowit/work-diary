@@ -4,9 +4,12 @@
 # Скрипт для ведения дневника о работе
 # Структура: спринты как папки, каждый день как отдельный файл
 
-DIARY_DIR="$HOME/nowork/notes/entries"
-TEMPLATE_DIR="$HOME/nowork/notes/templates"
-PROJECT_ROOT="$HOME/nowork/notes"
+# Определяем путь к проекту автоматически на основе расположения скрипта
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+DIARY_DIR="$PROJECT_ROOT/entries"
+TEMPLATE_DIR="$PROJECT_ROOT/templates"
 DIARY_EDITOR="${DIARY_EDITOR:-nano}"
 
 # Цвета для вывода
